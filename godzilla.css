@@ -1,0 +1,539 @@
+/* Reset cơ bản cho Header */
+.gz-header * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.gz-header {
+  background-color: #000;
+  color: #fff;
+  padding: 30px 0;
+  margin: -10px;
+  width: 100%;
+}
+
+.gz-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  gap: 20px;
+}
+
+/* --- LOGO --- */
+.gz-logo-section {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.gz-logo-main {
+  color: #e60012;
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+.gz-logo-sub {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+  margin-top: 2px;
+}
+
+.gz-text-bold {
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.gz-text-italic {
+  font-family: 'Brush Script MT', cursive, sans-serif;
+  font-size: 18px;
+  line-height: 0.8;
+}
+
+/* --- CENTER SECTION (Search & Buttons) --- */
+.gz-center-section {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 15px;
+}
+
+/* Search Bar */
+.gz-search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #555;
+  border-radius: 50px;
+  padding: 0 15px;
+  flex: 1;
+  height: 42px;
+}
+
+.gz-search-bar input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+}
+
+.gz-search-bar input::placeholder {
+  color: #aaa;
+}
+
+.gz-search-btn {
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Common Button Styles */
+.gz-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 42px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 0 20px;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+/* Red Button */
+.gz-btn-red {
+  background: linear-gradient(90deg, #ff4500, #c80000);
+  color: #fff;
+}
+
+.gz-btn-red:hover {
+  filter: brightness(1.1);
+}
+
+/* White Button */
+.gz-btn-white {
+  background: #fff;
+  color: #333;
+}
+
+.gz-buyee-text {
+  color: #0056b3;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* --- RIGHT SECTION (Actions) --- */
+.gz-right-section {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.gz-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  color: #fff;
+  transition: color 0.2s;
+  gap: 4px;
+}
+
+.gz-action:hover {
+  color: #e60012;
+}
+
+.gz-action span {
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+/* Hamburger Menu Icon */
+.gz-hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 18px;
+  width: 24px;
+  margin-bottom: 2px;
+}
+
+.gz-hamburger span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: currentColor;
+  border-radius: 2px;
+}
+
+/* Lưới 5 cột quan trọng nhất */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Ép 5 cột bằng nhau */
+  gap: 15px; /* Khoảng cách giữa các card */
+}
+
+/* Đảm bảo nội dung bên trong card luôn thẳng hàng đáy */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Đẩy footer xuống dưới */
+}
+
+.card-footer {
+  margin-top: auto; /* Luôn nằm sát đáy */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+}
+
+/* Style cho giá tiền giống ảnh */
+.price-box {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.tax {
+  font-size: 0.7rem;
+  color: #666;
+  font-weight: normal;
+}
+.sub-name {
+  color: #666;
+  font-size: 0.85em;
+  display: block;
+  margin-top: 2px;
+}
+
+/* Đảm bảo ảnh luôn vuông và nằm giữa nếu ảnh gốc có kích thước khác nhau */
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Hoặc 'cover' tùy thuộc vào ảnh gốc của bạn */
+  background-color: #f9f9f9; /* Nền mờ cho các ảnh có khoảng trắng */
+}
+
+/* Nút Xem thêm */
+.load-more-container {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+.btn-load-more {
+  border: 1px solid #ccc;
+  background: white;
+  padding: 8px 40px;
+  border-radius: 25px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.plus-icon { font-size: 18px; color: #999; }
+
+/* Bảng Tìm kiếm chi tiết */
+.advanced-search-container {
+  max-width: 800px;
+  margin: 50px auto;
+  border-top: 1px solid #eee;
+  padding-top: 30px;
+}
+.search-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.search-table th {
+  text-align: left;
+  background-color: #fcfcfc;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  font-size: 13px;
+  width: 25%;
+}
+.search-table td {
+  padding: 10px 15px;
+  border-bottom: 1px solid #eee;
+}
+.input-full, .select-full {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.date-row select {
+  padding: 5px;
+  border: 1px solid #ddd;
+}
+
+/* Nút tìm kiếm màu cam */
+.search-footer {
+  text-align: center;
+  margin-top: 30px;
+}
+.btn-submit-search {
+  padding: 12px 100px;
+  background: white;
+  border: 2px solid #e95414; /* Màu cam đặc trưng của Toho Store */
+  color: #e95414;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn-submit-search:hover {
+  background: #e95414;
+  color: white;
+}
+
+/* Container chính với nền xám nhạt của ảnh gốc */
+.history-section {
+  background-color: #f6f6f6;
+  padding-top: 40px;
+  position: relative;
+  border-top: 1px solid #eee;
+}
+
+.history-container {
+  max-width: 1200px; /* Đổi theo chiều rộng web của bạn */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.header-left .label {
+  font-size: 11px;
+  color: #a0a0a0;
+  font-weight: bold;
+}
+
+.header-left h2 {
+  font-size: 19px;
+  margin-top: 6px;
+}
+
+.btn-clear {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  background: none;
+  border: none;
+  font-size: 11px;
+  color: #333;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Lưới 8 sản phẩm (Grid) */
+.history-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr); /* 8 cột bằng nhau */
+  gap: 15px;
+  padding-bottom: 90px; /* Để trống chỗ cho chân thành phố */
+}
+
+/* Thẻ sản phẩm */
+.history-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Ép các card dài bằng nhau */
+}
+
+.image-box {
+  width: 100%;
+  aspect-ratio: 1/1; /* Ảnh luôn vuông */
+  background-color: #fff; /* Nền trắng của ảnh sản phẩm */
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Nằm gọn trong khung */
+}
+
+/* Container chứa text để dùng Flex căn đáy */
+.item-details {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Chiếm hết chỗ trống */
+}
+
+.name {
+  font-size: 11px;
+  line-height: 1.4;
+  color: #333;
+  margin-bottom: 12px; /* Đẩy giá tiền ra xa text */
+}
+
+/* Dòng giá tiền (Căn đáy) */
+.price-row {
+  margin-top: auto; /* Quan trọng: Đẩy khối này xuống sát đáy thẻ */
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.tax {
+  font-size: 9px;
+  color: #666;
+}
+
+/* Phần hình bóng thành phố */
+.footer-silhouette {
+  width: 100%;
+  line-height: 0; /* Bỏ khoảng trắng thừa ở chân ảnh */
+  background-color: #000; /* Nền đen của ảnh silhouette */
+}
+
+.silhouette-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Nút Back to top */
+.back-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 40px;
+  height: 40px;
+  background-color: #f7f7f7;
+  border: 1px solid #eee;
+  border-radius: 50%;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  z-index: 100;
+}
+
+.main-footer {
+  background-color: #000; /* Nền đen hoàn toàn */
+  color: #fff;
+  padding: 60px 0 40px 0;
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Logo chính ở giữa */
+.toho-logo-main {
+  margin-bottom: 40px;
+}
+.toho-logo-main img {
+  height: 35px; /* Điều chỉnh theo thực tế */
+  filter: brightness(0) invert(1); /* Nếu logo gốc màu đen thì chuyển sang trắng */
+}
+
+/* Khung chứa 4 logo đối tác */
+.store-logos {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+
+.logo-item {
+  background-color: #fff; /* Nền trắng cho từng ô logo */
+  width: 180px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.logo-item img {
+  max-width: 90%;
+  max-height: 80%;
+  object-fit: contain;
+}
+
+/* Các đường link điều khoản */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0 20px;
+  margin-bottom: 40px;
+}
+
+.footer-links li {
+  position: relative;
+}
+
+/* Gạch dọc phân cách giữa các chữ */
+.footer-links li:not(:last-child)::after {
+  content: "|";
+  position: absolute;
+  right: -12px;
+  color: #666;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Phần chữ Copyright */
+.copyright {
+  font-size: 10px;
+  color: #ccc;
+  line-height: 1.8;
+  letter-spacing: 0.05em;
+}

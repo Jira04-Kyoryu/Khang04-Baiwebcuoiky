@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Của Tôi</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header id="sidebar">
+        <div class="profile">
+            <img src="https://i.ytimg.com/vi/aHvgBlQOzCM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAdTSH5XfpQZHdIbTHPQ48JP43r9g" alt="Avatar" class="img-fluid">
+            <h1>Ngô Gia Khang</h1>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-skype"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+
+        <nav id="navbar">
+            <ul>
+                <li><a href="#hero"><i class="fas fa-home"></i> <span>Home</span></a></li>
+                <li><a href="#about"><i class="fas fa-user"></i> <span>About</span></a></li>
+                <li><a href="#resume"><i class="fas fa-file-alt"></i> <span>Resume</span></a></li>
+                <li><a href="#portfolio"><i class="fas fa-images"></i> <span>Portfolio</span></a></li>
+                <li><a href="#services"><i class="fas fa-server"></i> <span>Services</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <section id="hero">
+            <div class="hero-container">
+                <h1>Ngô Gia Khang</h1>
+                <p> Tokukatsu <span class="typed" data-typed-items="Freelance, Designer, Editor, Creator"></span></p>
+            </div>
+        </section>
+
+       <section id="about" class="about">
+            <div class="container">
+                <div class="section-title">
+                    <h2>About</h2>
+                    <p>Tôi là một người đam mê sáng tạo, luôn tìm kiếm những giải pháp mới mẻ trong thiết kế và lập trình. Với nhiều năm kinh nghiệm học hỏi và làm việc, tôi luôn nỗ lực mang đến những sản phẩm chất lượng nhất.</p>
+                </div>
+
+                <div class="row">
+                    <div class="image-col">
+                        <img src="https://preview.redd.it/godzilla-2002-look-so-cool-i-feel-like-if-godzilla-could-v0-szq0jbd9nkqf1.jpg?width=1080&crop=smart&auto=webp&s=9e3b5d890eb91377c06d0bc57b736b12795e8632" class="img-fluid" alt="Profile Image">
+                    </div>
+                    
+                    <div class="content-col">
+                        <h3>UI/UX Designer &amp; Web Developer.</h3>
+                        <p class="fst-italic">
+                            Châm ngôn làm việc: Sáng tạo không ngừng, tỉ mỉ trong từng chi tiết để tạo ra trải nghiệm người dùng hoàn hảo.
+                        </p>
+                        
+                        <div class="row info-list">
+                            <div class="col-half">
+                                <ul>
+                                    <li><i class="fas fa-chevron-right"></i> <strong>Ngày sinh:</strong> <span>09/01/2004</span></li>
+                                    <li><i class="fas fa-chevron-right"></i> <strong>Website:</strong> <span>www.ngokhang.com</span></li>
+                                    <li><i class="fas fa-chevron-right"></i> <strong>Điện thoại:</strong> <span>+84 444 583 52</span></li>
+                                    <li><i class="fas fa-chevron-right"></i> <strong>Thành phố:</strong> <span>Tây Ninh, Việt Nam</span></li>
+                                </ul>
+                            </div>
+                            <div class="col-half">
+                                <ul>
+                                    <li><i class="fas fa-chevron-right"></i> <strong>Tuổi:</strong> <span>22</span></li>
+                                    <li><i class="fas fa-chevron-right"></i> <strong>Học vấn:</strong> <span>Đại học</span></li>
+                                    <li><i class="fas fa-chevron-right"></i> <strong>Email:</strong> <span>kyoryukhang@gmail.com</span></li>
+                                    <li><i class="fas fa-chevron-right"></i> <strong>Công việc tự do:</strong> <span>Sẵn sàng</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <p>
+                            Ngoài việc lập trình và thiết kế, tôi còn có niềm đam mê với việc tạo ra những nội dung số hấp dẫn. Tôi luôn sẵn sàng đón nhận những thử thách mới và hợp tác trong các dự án thú vị.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const selectTyped = document.querySelector('.typed');
+            if (selectTyped) {
+                let typed_strings = selectTyped.getAttribute('data-typed-items');
+                typed_strings = typed_strings.split(', ');
+                new Typed('.typed', {
+                    strings: typed_strings,
+                    loop: true,
+                    typeSpeed: 100, 
+                    backSpeed: 50,  
+                    backDelay: 2000 
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+cdnjs.cloudflare.com

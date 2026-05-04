@@ -1,0 +1,267 @@
+/* Thiết lập cơ bản */
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: #272829;
+    background-color: #fff;
+    display: flex; /* Giữ cấu trúc chia đôi màn hình */
+}
+
+/* Sidebar cố định bên trái */
+#sidebar {
+    width: 300px;
+    height: 100vh;
+    background: #040b14;
+    color: white;
+    position: fixed;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+#sidebar .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 15px;
+}
+
+#sidebar .profile img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 8px solid #687ae6;
+    margin-bottom: 15px;
+    object-fit: cover; /* Giữ cho ảnh không bị méo */
+}
+
+#sidebar .profile h1 {
+    font-size: 24px;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+/* Icon mạng xã hội */
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: #212431;
+    color: #fff;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    background: #149ddd;
+}
+
+/* Menu điều hướng */
+#navbar {
+    padding: 30px 0 0 0;
+}
+
+#navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#navbar ul li {
+    padding: 10px 30px;
+}
+
+#navbar ul li a {
+    color: #a8a9b4;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+#navbar ul li a i {
+    margin-right: 15px;
+    font-size: 20px;
+    color: #6f7180;
+}
+
+#navbar ul li a:hover, #navbar ul li a:hover i {
+    color: #149ddd;
+}
+
+/* Nội dung chính */
+#main {
+    margin-left: 300px; /* Đẩy nội dung sang phải để không bị che bởi sidebar */
+    width: calc(100% - 300px);
+}
+#hero {
+    width: 100%;
+    height: 100vh;
+    background: url('https://img.toy-people.com/member/173313014249_1200.png') top center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0 40px;
+}
+
+#hero:before {
+    content: "";
+    background: rgba(5, 13, 24, 0.4); 
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.hero-container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-container h1 {
+    margin: 0 0 10px 0;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 56px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero-container p {
+    color: #fff;
+    margin: 0;
+    font-size: 26px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero-container p span {
+    color: #fff;
+    padding-bottom: 4px;
+    letter-spacing: 1px;
+    border-bottom: 3px solid #149ddd;
+}
+
+.typed-cursor {
+    font-size: 26px;
+    color: #fff;
+}
+.about {
+    padding: 60px 40px;
+    background-color: #fff;
+}
+
+.section-title {
+    padding-bottom: 30px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    color: #173b6c;
+    font-family: 'Poppins', sans-serif;
+}
+
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #149ddd;
+    bottom: 0;
+    left: 0;
+}
+
+.section-title p {
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+.about .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.about .image-col {
+    flex: 0 0 calc(33.333% - 15px);
+    max-width: calc(33.333% - 15px);
+}
+
+.about .image-col img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.about .content-col {
+    flex: 0 0 calc(66.666% - 15px);
+    max-width: calc(66.666% - 15px);
+}
+
+.about .content-col h3 {
+    font-weight: 700;
+    font-size: 26px;
+    color: #173b6c;
+    margin-top: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.about .content-col .fst-italic {
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+/* Định dạng danh sách thông tin (Info List) */
+.about .info-list {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.about .info-list .col-half {
+    flex: 0 0 calc(50% - 15px);
+    max-width: calc(50% - 15px);
+}
+
+.about .info-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.about .info-list ul li {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.about .info-list ul i {
+    font-size: 16px;
+    color: #149ddd;
+    margin-right: 10px;
+}
+
+.about .info-list ul strong {
+    margin-right: 10px;
+}
